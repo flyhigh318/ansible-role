@@ -1,0 +1,8 @@
+---
+- hosts: test
+  #remote_user: dao
+  #become: yes
+  become_user: root
+  gather_facts: False
+  roles:
+    - roles/dfxkdata

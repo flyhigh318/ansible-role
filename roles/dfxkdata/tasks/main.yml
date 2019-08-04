@@ -1,0 +1,17 @@
+---
+# tasks file for ansible/roles/dfxkdata
+
+  - name: echo "Hello World"
+    shell: echo {{ hello }}
+    register: log
+  - debug: var=log.stdout_lines
+
+  - name: echo "docker ps"
+    shell: docker ps
+    register: log
+  - debug: var=log.stdout_lines
+
+  - name: copy file
+    copy: src=test/a.txt dest=/tmp/a.txt
+
+  - include: test.yml

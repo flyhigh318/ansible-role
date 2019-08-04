@@ -1,0 +1,12 @@
+---
+# tasks file for ansible/roles/dfxkdata
+
+  - name: echo "Hello World 1"
+    shell: last
+    register: log
+  - debug: var=log.stdout_lines
+
+  - name: echo "docker info"
+    shell: docker info
+    register: log
+  - debug: var=log.stdout_lines

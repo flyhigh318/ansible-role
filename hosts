@@ -1,0 +1,4 @@
+[intral_docker]
+172.16.103.252  ansible_ssh_user=dao ansible_ssh_pass='1' ansible_become_pass='1'
+[test]
+172.16.103.252  ansible_ssh_user=root ansible_ssh_pass='1' 
